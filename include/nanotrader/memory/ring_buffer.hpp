@@ -181,4 +181,4 @@ public:
     MPSCRingBuffer& operator=(const MPSCRingBuffer&) = delete;
 };
 
-} // namespace nanotrader
+} // namespace nanotraderstatic constexpr bool ENABLE_PREFETCH = true;
