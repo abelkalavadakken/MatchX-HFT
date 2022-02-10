@@ -3,6 +3,23 @@
 
 namespace nanotrader {
 
+// PriceLevel implementations
+PriceLevel::PriceLevel() noexcept 
+    : price(Price{})
+    , total_quantity(0)
+    , head(nullptr)
+    , tail(nullptr) {
+}
+
+PriceLevel::PriceLevel(Price p) noexcept 
+    : price(p)
+    , total_quantity(0)
+    , head(nullptr)
+    , tail(nullptr) {
+}
+
+
+
 // OrderBook implementations
 OrderBook::OrderBook(Symbol symbol) noexcept 
     : symbol_(symbol)
