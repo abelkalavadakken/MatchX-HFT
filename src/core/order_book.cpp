@@ -18,7 +18,43 @@ PriceLevel::PriceLevel(Price p) noexcept
     , tail(nullptr) {
 }
 
+void PriceLevel::add_order(Order* order) noexcept {
+    if (!head) {
+        head = tail = order;
+        order->next = order->prev = nullptr;
+    } else {
+        tail->next = order;
+        order->prev = tail;
+        order->next = nullptr;
+        tail = order;
+    }
+    total_quantity += order->remaining_quantity;
+}
 
+void PriceLevel::remove_order(Order* order) noexcept {
+    if (order->prev) {
+        order->prev->next = order->next;
+    } else {
+        head = order->next;
+    }
+    
+    if (order->next) {
+        order->next->prev = order->prev;
+    } else {
+        tail = order->prev;
+    }
+    
+    total_quantity -= order->remaining_quantity;
+    order->next = order->prev = nullptr;
+}
+
+void PriceLevel::update_quantity(Order* order, Quantity old_quantity) noexcept {
+    total_quantity = total_quantity - old_quantity + order->remaining_quantity;
+}
+
+bool PriceLevel::is_empty() const noexcept {
+    return head == nullptr;
+}
 
 // OrderBook implementations
 OrderBook::OrderBook(Symbol symbol) noexcept 
