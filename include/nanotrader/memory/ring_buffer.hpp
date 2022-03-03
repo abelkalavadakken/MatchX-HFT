@@ -182,3 +182,4 @@ public:
 };
 
 } // namespace nanotraderstatic constexpr bool ENABLE_PREFETCH = true;
+bool try_pop(T& item) noexcept;
