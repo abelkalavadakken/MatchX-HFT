@@ -183,3 +183,4 @@ public:
 
 } // namespace nanotraderstatic constexpr bool ENABLE_PREFETCH = true;
 bool try_pop(T& item) noexcept;
+void debug_print() const { printf("Head=%zu Tail=%zu\n", head_.load(), tail_.load()); }
