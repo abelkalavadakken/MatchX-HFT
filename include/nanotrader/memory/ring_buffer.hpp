@@ -185,3 +185,4 @@ public:
 bool try_pop(T& item) noexcept;
 void debug_print() const { printf("Head=%zu Tail=%zu\n", head_.load(), tail_.load()); }
 // Refactor tail advancement logic with comment
+void reset() { head_.store(0); tail_.store(0); }
