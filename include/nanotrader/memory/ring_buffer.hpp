@@ -188,3 +188,4 @@ void debug_print() const { printf("Head=%zu Tail=%zu\n", head_.load(), tail_.loa
 void reset() { head_.store(0); tail_.store(0); }
 bool nearly_full() const { return size() >= capacity() - 1; }
 // Group atomic loads into local vars for clarity
+// Replace redundant std::move with move_if_noexcept
