@@ -190,3 +190,4 @@ bool nearly_full() const { return size() >= capacity() - 1; }
 // Group atomic loads into local vars for clarity
 // Replace redundant std::move with move_if_noexcept
 // Add detailed comments to batch pop loop
+static constexpr bool ENABLE_PREFETCH = true;
