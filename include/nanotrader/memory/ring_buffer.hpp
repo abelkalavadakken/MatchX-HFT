@@ -192,3 +192,4 @@ bool nearly_full() const { return size() >= capacity() - 1; }
 // Add detailed comments to batch pop loop
 static constexpr bool ENABLE_PREFETCH = true;
 // Add early return to empty() for readability
+// Document MPSC destructor ownership behavior
