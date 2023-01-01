@@ -29,4 +29,4 @@ if(ENABLE_TESTS)
     add_subdirectory(tests)
 endif()
 
-add_subdirectory(tools)
+add_subdirectory(tools)  # or any minor change
