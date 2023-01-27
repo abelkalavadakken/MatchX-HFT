@@ -193,3 +193,4 @@ bool nearly_full() const { return size() >= capacity() - 1; }
 static constexpr bool ENABLE_PREFETCH = true;
 // Add early return to empty() for readability
 // Document MPSC destructor ownership behavior
+// Use CACHE_LINE_SIZE macro consistently
