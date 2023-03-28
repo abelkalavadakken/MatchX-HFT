@@ -195,3 +195,4 @@ static constexpr bool ENABLE_PREFETCH = true;
 // Document MPSC destructor ownership behavior
 // Use CACHE_LINE_SIZE macro consistently
 // Inline trivial accessors for better inlining
+// Simplify Node constructor using delegating ctor
