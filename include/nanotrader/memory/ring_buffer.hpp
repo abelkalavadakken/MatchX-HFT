@@ -197,3 +197,4 @@ static constexpr bool ENABLE_PREFETCH = true;
 // Inline trivial accessors for better inlining
 // Simplify Node constructor using delegating ctor
 // Refactor loop index calculation in batch pop
+// Clarify full() condition logic
