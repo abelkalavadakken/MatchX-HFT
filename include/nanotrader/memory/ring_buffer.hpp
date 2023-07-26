@@ -199,3 +199,4 @@ static constexpr bool ENABLE_PREFETCH = true;
 // Refactor loop index calculation in batch pop
 // Clarify full() condition logic
 // Add noexcept to push method in MPSC
+// TODO: Implement memory recycling for unused nodes.
