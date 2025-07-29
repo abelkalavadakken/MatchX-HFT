@@ -1,6 +1,6 @@
 # MatchX | NanoTrader - Ultra-Fast Order Matching Engine
 
-A production-grade C++ high-frequency trading (HFT) order matching engine designed for **microsecond-level latency** and **1M+ orders/second throughput**.
+A production-grade C++17 high-frequency trading (HFT) order matching engine designed for **microsecond-level latency** and **1M+ orders/second throughput**.
 
 ## ⚡ Performance Highlights
 
